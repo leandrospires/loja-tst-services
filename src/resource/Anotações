@@ -3,5 +3,5 @@ cd /e/LeandroPires/Alura/JAR-RS/loja
 git init
 git add .
 git commit -m "comentario"
-git remote add origin https://github.com/leandrospires/livraria-maven.git
+git remote add origin https://github.com/leandrospires/loja-tst-services.git
 git push -u origin master

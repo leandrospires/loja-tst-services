@@ -1,7 +1,16 @@
 package br.com.alura.loja.modelo;
 
+import java.util.Iterator;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Projeto {
 
 	private long Id;
@@ -16,6 +25,9 @@ public class Projeto {
 	}
 	
 	public Projeto () {
+	}
+	
+	public void remove(long id) {
 		
 	}
 	
@@ -23,6 +35,10 @@ public class Projeto {
 		
 		return new XStream().toXML(this);
 		
+	}
+	
+	public String toJson() {
+		return new Gson().toJson(this);
 	}
 	
 	public long getId() {
